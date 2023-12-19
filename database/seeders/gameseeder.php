@@ -25,7 +25,7 @@ class gameseeder extends Seeder
                 'title' => 'Demo Game 2',
                 'thumbnail' => 'demo_thumbnail_2.jpg',
                 'slug' => 'demo-game-2',
-                'description' => 'This is demo game 2',,
+                'description' => 'This is demo game 2',
                 'author' => 'dev2',
                 ],
         ]);

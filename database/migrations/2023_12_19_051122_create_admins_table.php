@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
             $table->string('username')->unique;
-            $table->timestamp('Registered_at')->now();
+            $table->string('password');
+            $table->timestamp('Registered_at')->useCurrent();
             $table->timestamp('last_login_at')->nullable();
         });
     }
