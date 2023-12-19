@@ -12,13 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('games', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
+            $table->string('title')->primary();
             $table->string('thumbnail')->nullable();
             $table->string('slug')->unique();
             $table->text('description');
             $table->string('author');
-            $table->foreign('author')->references('id')->on('users');
+            $table->foreign('author')->references('username')->on('users');
         });
     }
 

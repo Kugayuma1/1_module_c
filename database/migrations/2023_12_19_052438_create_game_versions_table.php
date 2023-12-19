@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('game_versions', function (Blueprint $table) {
             $table->id();
             $table->string('game');
-            $table->foreign('game')->references('id')->on('games');
+            $table->foreign('game')->references('title')->on('games');
             $table->timestamp('version_timestamp')->useCurrent();
             $table->string('storage_path');
         });
